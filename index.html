@@ -9,6 +9,7 @@
     <title>Around The U.S.</title>
     <link rel="shortcut icon" href="./atufavicon.ico">
     <link rel="stylesheet" href="./pages/index.css">
+    <script defer src="./scripts/index.js"></script>
 </head>
 <body>
     <div class="page">
@@ -38,7 +39,8 @@
                     </h1>
                     <button
                         type="submit"
-                        class="profile__edit-button"> 
+                        class="profile__edit-button"
+                    > 
                     </button>
                     <p class="profile__info-description">
                         Explorador
@@ -147,11 +149,12 @@
                     </div>   
                 </div>
             </section>
-            <div class="popup">
+            <div class="popup" id="popup-profile">
                 <fieldset class="popup__container">
                     <button
                         class="container__close-button"
                         type="button"
+                        id="close-profile-popup"
                     ></button>
                     <h2 class="container__title">
                         Editar perfil

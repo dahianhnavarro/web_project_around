@@ -8,7 +8,7 @@
     display: none;
 }
 
-.popup__opened {
+.popup__show {
     display: block;
 }
 
