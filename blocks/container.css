@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+.container__close-button:hover {
+    opacity: .8;
+}
+
 .container__title {
     font-family: Inter;
     font-size: 24px;
@@ -66,6 +70,10 @@
     width: 358px;
     height: 50px;
     cursor: pointer;
+}
+
+.container__button-save:hover {
+    opacity: .8;
 }
 
 @media screen and (max-width: 320px) {

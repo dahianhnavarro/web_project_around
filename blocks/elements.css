@@ -58,6 +58,19 @@
     align-self: flex-end;
 }
 
+.elements__heart-button:hover {
+    opacity: .5;
+}
+
+.elements__heart-button:active {
+    background: url("../images/elements__heart-button-black.png") no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    width: 21px;
+    height: 19px;
+}
+
 @media screen and (max-width:320px) {
     .elements {
         max-width: 282px;

@@ -56,6 +56,10 @@
     background: url('../images/profile__edit-button.svg');
 }
 
+.profile__edit-button:hover {
+    opacity: .6;
+}
+
 .profile__add-button {
     max-width: 150px;
     min-height: 50px;
@@ -69,6 +73,10 @@
     padding: 0px;
     display: block;
     background-image: url('../images/profile__add-button.svg');
+}
+
+.profile__add-button:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 320px) {

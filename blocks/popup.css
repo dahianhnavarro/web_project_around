@@ -5,7 +5,7 @@
     left: 0%;
     width: 1263px;
     height: 1217px;
-    
+    display: none;
 }
 
 .popup__opened {
