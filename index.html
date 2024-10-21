@@ -11,6 +11,182 @@
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body>
+    <div class="page">
+        <header class="header">
+            <img 
+                class="header__logo"
+                src="./images/header__logo.png"
+                alt="Logo de Around The U.S."
+            />
+            <img
+                class="header__line"
+                src="./images/header__line.png"
+                alt="Línea blanca separadora"
+            />
+        </header>
+
+        <main class="content">
+            <section class="profile">
+                <img
+                    class="profile__avatar"
+                    src="./images/profile__avatar.png"
+                    alt="Foto de perfil de la cuenta de Jacques Cousteau"
+                />
+                <div class="profile__info">
+                    <h1 class="profile__info-name">
+                        Jacques Cousteau
+                    </h1>
+                    <button
+                        type="submit"
+                        class="profile__edit-button"> 
+                    </button>
+                    <p class="profile__info-description">
+                        Explorador
+                    </p>
+                </div>
+                <button 
+                    type="submit" 
+                    class="profile__add-button">
+                </button>
+            </section>
+            <section class="elements">
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__yosemite.png"
+                        alt="Imagen del Valle de Yosemite"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Valle de Yosemite
+                        </p> 
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button> 
+                    </div>
+                </div>
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__lago.png"
+                        alt="Imagen del Lago Louise"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Lago Louise
+                        </p>
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button>
+                    </div>  
+                </div>
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__calvas.png"
+                        alt="Imagen de las Montañas Calvas"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Montañas Calvas
+                        </p>
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button>
+                    </div>   
+                </div>
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__latemar.png"
+                        alt="Imagen de Latemar"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Latemar
+                        </p>
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button>
+                    </div>   
+                </div>
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__vanois.png"
+                        alt="Imagen de Vanois National Park"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Vanois National...
+                        </p>
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button>
+                    </div>   
+                </div>
+                <div class="elements__item">
+                    <img
+                        class="elements__image"
+                        src="./images/elements__braies.png"
+                        alt="Imagen de Lago de Braies"
+                    />
+                    <div class="elements__description">
+                        <p class="elements__title">
+                            Lago di Braies
+                        </p>
+                        <button
+                            type="submit"
+                            class="elements__heart-button">
+                        </button>
+                    </div>   
+                </div>
+            </section>
+            <div class="popup">
+                <fieldset class="popup__container">
+                    <button
+                        class="container__close-button"
+                        type="button"
+                    ></button>
+                    <h2 class="container__title">
+                        Editar perfil
+                    </h2>
+                    <input
+                        class="container__item container__item_el_name"
+                        type="text"
+                        name="name"
+                        id="input-name"
+                        placeholder="Nombre"
+                        required
+                    >
+                    <input
+                        class="container__item container__item_el_about_me"
+                        type="text"
+                        name="about-me"
+                        placeholder="Acerca de mí"
+                    >
+                    <button
+                        class="container__button-save"    
+                        type="submit"
+                    >
+                        Guardar
+                    </button>
+                </fieldset>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyright">
+                © 2024 Around The U.S.
+            </p>
+        </footer>
+
+    </div>
     
 </body>
 </html>
