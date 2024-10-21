@@ -150,36 +150,40 @@
                 </div>
             </section>
             <div class="popup" id="popup-profile">
-                <fieldset class="popup__container">
-                    <button
-                        class="container__close-button"
-                        type="button"
-                        id="close-profile-popup"
-                    ></button>
-                    <h2 class="container__title">
-                        Editar perfil
-                    </h2>
-                    <input
-                        class="container__item container__item_el_name"
-                        type="text"
-                        name="name"
-                        id="input-name"
-                        placeholder="Nombre"
-                        required
-                    >
-                    <input
-                        class="container__item container__item_el_about_me"
-                        type="text"
-                        name="about-me"
-                        placeholder="Acerca de mí"
-                    >
-                    <button
-                        class="container__button-save"    
-                        type="submit"
-                    >
-                        Guardar
-                    </button>
-                </fieldset>
+                <form class="popup__container" id="profile-form">
+                    <fieldset class="popup__container">
+                        <button
+                            class="container__close-button"
+                            type="button"
+                            id="close-profile-popup"
+                        ></button>
+                        <h2 class="container__title">
+                            Editar perfil
+                        </h2>
+                        <input
+                            class="container__item container__item_el_name"
+                            type="text"
+                            name="name"
+                            id="input-name"
+                            placeholder="Nombre"
+                            required
+                        >
+                        <input
+                            class="container__item container__item_el_about_me"
+                            type="text"
+                            name="about-me"
+                            id="input-about"
+                            placeholder="Acerca de mí"
+                            required
+                        >
+                        <button
+                            class="container__button-save"    
+                            type="submit"
+                        >
+                            Guardar
+                        </button>
+                    </fieldset>
+                </form>
             </div>
         </main>
 
