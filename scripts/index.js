@@ -9,6 +9,8 @@ const profileForm = document.querySelector("#profile-form");
 
 function openPopup(popup) {
     popup.classList.add("popup__show");
+    inputName.textContent = profileName.value;
+    inputAbout.textContent = profileAbout.value;
 };
 function closePopup(popup) {
     popup.classList.remove("popup__show");
@@ -16,14 +18,14 @@ function closePopup(popup) {
 
 profileButton.addEventListener("click", function () {
     openPopup(popupProfile);
-  });
-  closeButton.addEventListener("click", function () {
+});
+closeButton.addEventListener("click", function () {
     closePopup(popupProfile);
-  });
+});
 
-  profileForm.addEventListener("submit", function (evt) {
+profileForm.addEventListener("submit", function (evt) {
     evt.preventDefault(); 
     profileName.textContent = inputName.value; 
     profileAbout.textContent = inputAbout.value; 
     closePopup(popupProfile);
-  }); 
+}); 
