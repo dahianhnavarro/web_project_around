@@ -154,3 +154,51 @@ formAddCard.addEventListener("submit", (evt) => {
       closePopup(popupCards);
     }
   });
+
+//EVENTOS AVANZADOS
+//cerrar popup cuando clic fuera de formulario
+popupProfile.querySelector(".popup__overlay").addEventListener("click", function () {
+  closePopup(popupProfile);
+});
+
+popupCards.querySelector(".popup__overlay").addEventListener("click", function () {
+  closePopup(popupCards);
+});
+
+popupCardSizeup.querySelector(".popup__overlay").addEventListener("click", function () {
+  closePopup(popupCardSizeup);
+});
+
+//cerrar popup con esc key
+function closePopupWithEscape(evt) {
+  if (evt.key == "Escape") {
+    if (popupProfile) {
+      closePopup(popupProfile);
+    }
+    if (popupCards) {
+      closePopup(popupCards);
+    }
+    if (popupCardSizeup) {
+      closePopup(popupCardSizeup);
+    }
+  }
+}
+
+//listener para esc key
+document.addEventListener("keydown", closePopupWithEscape);
+
+//funcion general submit form con enter key
+function submitFormWithEnter (evt, form) {
+  if (evt.key === "Enter") {
+    evt.preventDefault();
+    form.requestSubmit();
+  }
+}
+
+//submit profile form con enter key
+inputName.addEventListener("keydown", (evt) => submitFormWithEnter (evt, profileForm));
+inputAbout.addEventListener("keydown", (evt) => submitFormWithEnter (evt, profileForm));
+
+//submit add card form con enter key
+inputCardTitle.addEventListener("keydown", (evt) => submitFormWithEnter (evt, formAddCard));
+inputCardLink.addEventListener("keydown", (evt) => submitFormWithEnter (evt, formAddCard));
