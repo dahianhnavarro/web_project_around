@@ -99,6 +99,32 @@
     opacity: .8;
 }
 
+/* manejo de forms y errores */
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-error {
+    font-size: 12px;
+    display: none;
+}
+
+.form__input:invalid ~ .input-error {
+    display: block; /*mostrar error cuando input invalido*/
+  }
+
 @media screen and (max-width: 320px) {
     .container__close-button {
         background-image: url(../images/container__close-icon.svg);
