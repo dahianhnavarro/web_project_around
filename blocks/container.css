@@ -116,6 +116,11 @@
     border-radius: 4px;
 }
 
+.form__input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
 .input-error {
     font-size: 12px;
     display: none;
@@ -123,6 +128,26 @@
 
 .form__input:invalid ~ .input-error {
     display: block; /*mostrar error cuando input invalido*/
+  }
+
+  .form__button_disabled {
+    background-color: #d3d3d3; 
+    opacity: 0.6;
+    cursor: not-allowed; 
+    pointer-events: none; 
+    
+  }
+
+  .form__input_error {
+    border: 2px solid #e74c3c; 
+    border-bottom: 1px solid #e74c3c;
+  }
+
+  .form__error_show {
+    display: block;
+    color: #e74c3c; 
+    font-size: 12px; 
+    margin-top: 6px;
   }
 
 @media screen and (max-width: 320px) {
