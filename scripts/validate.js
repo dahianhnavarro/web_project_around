@@ -15,6 +15,7 @@ export const hideInputError = (formElement, inputElement) => {
     errorElement.textContent = "";
 };
 
+//CHECK VALIDEZ
 //check input para validez
 export const checkInputValidity = (formElement, inputElement) => {
     if (!inputElement.validity.valid) {
@@ -25,3 +26,39 @@ export const checkInputValidity = (formElement, inputElement) => {
     }
 };
 
+//check si input tiene invalidez
+export const hasInvalidInput = (inputList) => {
+    return inputList.some((inputElement) => {
+        return !inputElement.validity.valid;
+    });
+};
+
+//VALIDEZ Y BOTONES
+//toggle de boton segun validez de input
+export const toggleStateOfButton = (inputList, buttonElement) => {
+    console.log(hasInvalidInput(inputList));
+    if (hasInvalidInput(inputList)) {
+        buttonElement.classList.add("form__button_disabled");
+    }
+    else {
+        buttonElement.classList.remove("form__button_disabled");
+    }
+};
+
+//EVENTOS DE VALIDACION
+//evento para cada input
+export const setEventListeners = (formElement) => {
+    const inputList = Array.from(formElement.querySelectorAll(".container__item"));
+    const buttonElement = formElement.querySelector(".container__button-save");
+
+    //check estado boton al inicio
+    toggleStateOfButton(inputList, buttonElement);
+
+    //estado de boton save
+    inputList.forEach((inputElement) => {
+        inputElement.addEventListener("input", function () {
+            checkInputValidity(formElement, inputElement);
+            toggleStateOfButton(inputList, buttonElement); 
+        });
+    });
+};
