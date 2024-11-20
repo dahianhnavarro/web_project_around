@@ -62,3 +62,28 @@ export const setEventListeners = (formElement) => {
         });
     });
 };
+
+//VALIDACION PARA TODOS LOS FORMS
+export const enableValidation = (config) => {
+    const formList = Array.from(document.querySelectorAll(config.formSelector));
+    formList.forEach((formElement) => {
+        formElement.addEventListener("sbumit", function (evt) {
+            evt.preventDefault();
+        });
+
+        const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
+        const buttonElement = formElement.querySelector(config.submitButtonSelector);
+
+        setEventListeners(formElement, inputList, buttonElement, config);
+    });
+};
+  
+enableValidation({
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__button",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible"
+  });
+  
