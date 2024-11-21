@@ -48,7 +48,7 @@ export const showInputError = (formElement, inputElement, errorMessage) => {
   //EVENTOS DE VALIDACION
   //evento para cada input
   export const setEventListeners = (formElement) => {
-    const inputList = Array.from(formElement.querySelectorAll(".container__item"));
+    const inputList = Array.from(formElement.querySelectorAll(".form__input"));
     const buttonElement = formElement.querySelector(".container__button-save");
   
     //check estado boton al inicio

@@ -29,7 +29,7 @@
     height: 100%;
 }
 
-.popup__container {
+.popup__form {
     background-color: #ffffff;
     opacity: 1;
     border: none;
@@ -93,7 +93,7 @@
         height: 2814px;   
     }
 
-    .popup__container {
+    .popup__form {
         background-color: #ffffff;
         opacity: 1;
         border: none;
