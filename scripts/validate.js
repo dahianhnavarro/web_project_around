@@ -2,15 +2,15 @@
 //show error de input
 export const showInputError = (formElement, inputElement, errorMessage) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.add("form__input_error");
+    inputElement.classList.add("form__input_type_error");
     errorElement.textContent = errorMessage;
     errorElement.classList.add("form__error_show");
   };
   
   //hide error de input
   export const hideInputError = (formElement, inputElement) => {
-    const errorElement= formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.remove("form__input_error");
+    const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+    inputElement.classList.remove("form__input_type_error");
     errorElement.classList.remove("form__error_show");
     errorElement.textContent = "";
   };
@@ -20,9 +20,8 @@ export const showInputError = (formElement, inputElement, errorMessage) => {
   export const checkInputValidity = (formElement, inputElement) => {
     if (!inputElement.validity.valid) {
         showInputError(formElement, inputElement, inputElement.validationMessage);
-    } 
-    else {
-        hideInputError(form, inputElement);
+    } else {
+        hideInputError(formElement, inputElement);
     }
   };
   
@@ -39,8 +38,7 @@ export const showInputError = (formElement, inputElement, errorMessage) => {
     console.log(hasInvalidInput(inputList));
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add("form__button_disabled");
-    }
-    else {
+    } else {
         buttonElement.classList.remove("form__button_disabled");
     }
   };
@@ -49,7 +47,7 @@ export const showInputError = (formElement, inputElement, errorMessage) => {
   //evento para cada input
   export const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(".form__input"));
-    const buttonElement = formElement.querySelector(".container__button-save");
+    const buttonElement = formElement.querySelector(".form__submit");
   
     //check estado boton al inicio
     toggleStateOfButton(inputList, buttonElement);

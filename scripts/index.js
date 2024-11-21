@@ -17,7 +17,7 @@ const cardCloseButton = document.querySelector("#close-cards-popup");
 const formAddCard = document.querySelector("#cards-form")
 const inputCardTitle = document.querySelector("#input-title");
 const inputCardLink = document.querySelector("#input-link");
-const createButton = document.querySelector(".container__button-save");
+const createButton = document.querySelector(".form__submit");
 
 //variables sizeup cards
 const popupCardSizeup = document.querySelector("#popup-size-card");

@@ -28,7 +28,7 @@
     padding-bottom: 48px;
 }
 
-.container__button-save {
+.form__submit {
     border: 1px solid #C4C4C4;
     padding: 13.66px 124px 18.49px 125px;
     background-color: #000000;
@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 
-.container__button-save:hover {
+.form__submit:hover {
     opacity: .8;
 }
 
@@ -99,7 +99,7 @@
     pointer-events: none; 
 }
 
-.form__input_error {
+.form__input_type_error {
     border: 2px solid #e74c3c; 
     border-bottom: 1px solid #e74c3c;
 }
@@ -135,10 +135,10 @@
         text-align: left;
         padding-top: 25px;
         padding-left: 22px;
-        padding-bottom: 76px;
+        padding-bottom: 50px;
     }
     
-    .container__button-save {
+    .form__submit {
         border: 1px solid #C4C4C4;
         padding: 14px 92px;
         background-color: #000000;
