@@ -17,7 +17,7 @@ const cardCloseButton = document.querySelector("#close-cards-popup");
 const formAddCard = document.querySelector("#cards-form")
 const inputCardTitle = document.querySelector("#input-title");
 const inputCardLink = document.querySelector("#input-link");
-const createButton = document.querySelector(".container__button-create");
+const createButton = document.querySelector(".container__button-save");
 
 //variables sizeup cards
 const popupCardSizeup = document.querySelector("#popup-size-card");
@@ -202,4 +202,3 @@ inputAbout.addEventListener("keydown", (evt) => submitFormWithEnter (evt, profil
 //submit add card form con enter key
 inputCardTitle.addEventListener("keydown", (evt) => submitFormWithEnter (evt, formAddCard));
 inputCardLink.addEventListener("keydown", (evt) => submitFormWithEnter (evt, formAddCard));
-
