@@ -2,12 +2,21 @@
 //abrir cualquier popup
 export function openPopup(popup) {
     popup.classList.add("popup__show");
+    document.addEventListener("keydown", closePopupWithEscape);
 };
 
 //cerrar cualquier popup
 export function closePopup(popup) {
   popup.classList.remove("popup__show");
+  document.removeEventListener("keydown", closePopupWithEscape);
 };
+
+//cerrar popup con overlay click
+export function closePopupWithOverlayClick(event) {
+if (event.target.classList.contains("popup")) {
+  closePopup(event.target);
+}
+}
 
 //cerrar popup con esc key
 export function closePopupWithEscape(event) {
