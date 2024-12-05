@@ -13,9 +13,12 @@ export function closePopup(popup) {
 
 //cerrar popup con overlay click
 export function closePopupWithOverlayClick(event) {
-if (event.target.classList.contains("popup")) {
-  closePopup(event.target);
-}
+  if (event.target.classList.contains("popup__overlay")) {
+    const openPopup = document.querySelector(".popup__show");
+    if (openPopup) {
+      closePopup(openPopup)
+    }
+  };
 }
 
 //cerrar popup con esc key

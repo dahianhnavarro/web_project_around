@@ -135,8 +135,8 @@ formAddCard.addEventListener("submit", (evt) => {
   closePopup(popupCards)
 });
 
-//cerrar popup con overlay y esc clip
-const popups = document.querySelectorAll(".popup__overlay");
+//cerrar popup con overlay
+const popups = document.querySelectorAll(".popup");
 popups.forEach((popup) => {
   popup.addEventListener("click", closePopupWithOverlayClick);
 });

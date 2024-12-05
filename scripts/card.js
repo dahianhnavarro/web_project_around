@@ -85,7 +85,7 @@ export default class Card {
             popupImage.alt = this._name;
             popupCaption.textContent = this._name;
 
-            imagePopup.classList.add("popup_show");
+            imagePopup.classList.add("popup__show");
 
             if (!this._isEscapeListenerAdded) {
                 this._handleEscape = (event) => {
