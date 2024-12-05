@@ -1,3 +1,8 @@
+//IMPORTACIONES
+import Card from "./card.js";
+import FormValidator from "./FormValidator.js";
+import { openPopup, closePopup, closePopupWithEscape } from "./utils.js";
+
 //VARIABLES
 //variables editar perfil
 const popupProfile = document.querySelector("#popup-profile");
@@ -51,16 +56,21 @@ const initialCards = [
   }
 ];
 
-//FUNCIONES GENERALES
-//abrir cualquier popup
-function openPopup(popup) {
-    popup.classList.add("popup__show");
+//variables validation
+const validationConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".form__submit",
+  inactiveButtonClass: "form__button_disabled",
+  inputErrorClass: ".form__input_type_error",
+  errorClass: ".form__error_show"
 };
 
-//cerrar cualquier popup
-function closePopup(popup) {
-  popup.classList.remove("popup__show");
-};
+//variables FormValidator
+const profileFormValidator = new FormValidator(validationConfig, popupProfile);
+const addCardsFormValidator = new FormValidator(validationConfig, formAddCard);
+profileFormValidator.enableValidation();
+addCardsFormValidator.enableValidation();
 
 //PERFIL
 //abrir editar perfil popup
@@ -168,21 +178,6 @@ popupCards.querySelector(".popup__overlay").addEventListener("click", function (
 popupCardSizeup.querySelector(".popup__overlay").addEventListener("click", function () {
   closePopup(popupCardSizeup);
 });
-
-//cerrar popup con esc key
-function closePopupWithEscape(evt) {
-  if (evt.key == "Escape") {
-    if (popupProfile) {
-      closePopup(popupProfile);
-    }
-    if (popupCards) {
-      closePopup(popupCards);
-    }
-    if (popupCardSizeup) {
-      closePopup(popupCardSizeup);
-    }
-  }
-}
 
 //listener para esc key
 document.addEventListener("keydown", closePopupWithEscape);
