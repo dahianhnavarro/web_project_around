@@ -7,7 +7,7 @@ import { openPopup, closePopup, closePopupWithEscape } from "./utils.js";
 //variables editar perfil
 const popupProfile = document.querySelector("#popup-profile");
 const profileButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelector(".container__close-button");
+const closeButton = document.querySelector(".popup__close-button");
 const profileName = document.querySelector(".profile__info-name");
 const profileAbout = document.querySelector(".profile__info-description");
 const inputName = document.querySelector("#input-name");
@@ -59,10 +59,10 @@ const initialCards = [
 //variables validation
 const validationConfig = {
   formSelector: ".popup__form",
-  inputSelector: ".form__input",
+  inputSelector: ".popup__input",
   submitButtonSelector: ".form__submit",
   inactiveButtonClass: "form__button_disabled",
-  inputErrorClass: ".form__input_type_error",
+  inputErrorClass: ".popup__input_type_error",
   errorClass: ".form__error_show"
 };
 

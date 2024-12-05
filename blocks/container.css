@@ -1,4 +1,4 @@
-.container__close-button {
+.popup__close-button {
     background-image: url(../images/container__close-icon.svg);
     position:fixed;
     background-color: #000000;
@@ -13,11 +13,11 @@
     cursor: pointer;
 }
 
-.container__close-button:hover {
+.popup__close-button:hover {
     opacity: .8;
 }
 
-.container__title {
+.popup__title {
     font-family: Inter;
     font-size: 24px;
     font-weight: 900;
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: center;
 }
-.form__input {
+.popup__input {
     border-left: none;
     border-right: none;
     border-top: none;
@@ -74,11 +74,11 @@
     color: #000000;
 }
 
-.form__input::placeholder {
+.popup__input::placeholder {
     color: #C4C4C4;
 }
 
-.form__input:last-of-type {
+.popup__input:last-of-type {
     margin-top: 29px;
 }
 
@@ -90,7 +90,7 @@
     margin-top: 6px;
 }
 
-.form__input:invalid ~ .input-error {
+.popup__input:invalid ~ .input-error {
     display: block; /*mostrar error cuando input invalido*/
 }
 
@@ -101,7 +101,7 @@
     pointer-events: none; 
 }
 
-.form__input_type_error {
+.popup__input_type_error {
     border: 2px solid #e74c3c; 
     border-bottom: 1px solid #e74c3c;
     font-size: 12px; 
@@ -117,7 +117,7 @@
   }
 
 @media screen and (max-width: 320px) {
-    .container__close-button {
+    .popup__close-button {
         background-image: url(../images/container__close-icon.svg);
         position:fixed;
         background-color: #000000;
@@ -132,7 +132,7 @@
         cursor: pointer;
     }
     
-    .container__title {
+    .popup__title {
         font-family: Inter;
         font-size: 18px;
         font-weight: 900;
@@ -162,7 +162,7 @@
         cursor: pointer;
     }
 
-    .form__input {
+    .popup__input {
         border-left: none;
         border-right: none;
         border-top: none;
@@ -179,11 +179,11 @@
         color: #000000;
     }
     
-    .form__input::placeholder {
+    .popup__input::placeholder {
         color: #C4C4C4;
     }
     
-    .form__input:last-of-type {
+    .popup__input:last-of-type {
         margin-top: 30px;
     }
 }
