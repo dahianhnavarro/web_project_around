@@ -1,6 +1,10 @@
 //IMPORTACIONES
-import Card from "./card.js";
-import FormValidator from "./FormValidator.js";
+import { Card } from "./Card.js"; //Mensaje de error presente en VS Code--No produce errores en la consola y funciones son funcionales
+import { FormValidator } from "./FormValidator.js";
+import { Popup } from "./Popup.js";
+import { PopupWithForm } from "./PopupWithForm.js";
+import { Section } from "./Section.js";
+import { UserInfo } from "./UserInfo.js";
 import { openPopup, closePopup, closePopupWithOverlayClick } from "./utils.js";
 
 //variables editar perfil 
