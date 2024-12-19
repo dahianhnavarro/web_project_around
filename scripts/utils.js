@@ -28,3 +28,13 @@ export function closePopupWithEscape(event) {
       }
     }
   }
+
+  //cerrar popup con overlay click
+export function closePopupWithOverlayClick(event) {
+  if (event.target.classList.contains("popup__overlay")) {
+    const openPopup = document.querySelector(".popup__show");
+    if (openPopup) {
+      closePopup(openPopup)
+    }
+  };
+}

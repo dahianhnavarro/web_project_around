@@ -1,4 +1,4 @@
-export default class Popup {
+export class Popup {
     constructor ( popupSelector ) {
         this._popup = document.querySelector(popupSelector);
         this._handleEscClose = this._handleEscClose.bind(this);
@@ -17,7 +17,7 @@ export default class Popup {
     }
 
     //método privado para cerrar popup con Esc
-    _handleEscClose() {
+    _handleEscClose(evt) {
         if ( evt.key === "Escape" ) {
             this.close();
         }
@@ -25,17 +25,11 @@ export default class Popup {
 
      //detector de eventos de click 
     setEventListeners() {
-         //cerrar al hacer clic en X 
-        this._popup.querySelector(".popup__close-button")
-            .addEventListener("click", () => {
-            this.close();
-        });
-
-        //cerrar con overlay click
-        this._popup.addEventListener("mousedown", (evt) => {
-            if(evt.target.classList.contains(".popup__overlay")) { //revisar funcionalidad de esta clase en esta funcion
-                this.close();
-            }
+        this._popup.addEventListener("click", (evt) => {
+            if (
+                evt.target.classList.contains("popup__overlay") ||
+                evt.target.closest(".popup__close-button")
+            ){ this.close(); }
         });
     }
 }
