@@ -39,7 +39,6 @@ const validationConfig = {
   inactiveButtonClass: "form__button_disabled",
   inputErrorClass: ".popup__input_type_error",
   errorClass: ".form__error_show",
-  containerSelector: ".elements__container",
 };
 
 //cards iniciales
