@@ -86,15 +86,17 @@ function handleCardClick(name, link) {
 const popupWithImage = new PopupWithImage("#popup-size-card");
 
 //Section para cards
-const cardSection = new Section({
-  items: initialCardsData,
-  renderer: (cardData) => {
-    const card = new Card(cardData, "#template-card",
-      handleCardClick);
-    const cardElement = card.generateCard();
-    cardSection.addItems(cardElement);
+const cardSection = new Section(
+  {
+    items: initialCardsData,
+    renderer: (cardData) => {
+      const card = new Card(cardData, "#template-card", handleCardClick);
+      const cardElement = card.generateCard();
+      cardSection.addItems(cardElement);
+    },
   },
-}, ".elements__container");
+  ".elements__container"
+);
 cardSection.renderItems();
 
 //instancia de UserInfo clase
