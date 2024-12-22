@@ -137,7 +137,7 @@ addButton.addEventListener("click", () => {
 //PopupWithForm para add card form
 const popupAddCardForm = new PopupWithForm("#popup-cards", (formData) => {
   const cardData = { 
-    name: formData.title, link: formData["image-url"]
+    name: formData.title, link: formData.link,
   };
 
   const card = new Card(cardData, "#template-card",
