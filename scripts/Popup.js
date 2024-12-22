@@ -28,7 +28,8 @@ export class Popup {
         this._popup.addEventListener("click", (evt) => {
             if (
                 evt.target.classList.contains("popup__overlay") ||
-                evt.target.closest(".popup__close-button")
+                evt.target.closest(".popup__close-button") ||
+                evt.target.closest(".popup__close-card")
             ){ this.close(); }
         });
     }
