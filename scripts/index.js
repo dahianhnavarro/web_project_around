@@ -10,7 +10,7 @@ import { closePopupWithOverlayClick } from "./utils.js";
 //variables editar perfil 
 const profileButton = document.querySelector(".profile__edit-button");
 //const closeButton = document.querySelector(".popup__close-button");
-const popupProfile = document.querySelector("#popup-profile");
+//const popupProfile = document.querySelector("#popup-profile");
 //const profileName = document.querySelector(".profile__info-name");
 //const profileAbout = document.querySelector(".profile__info-description");
 const inputName = document.querySelector("#input-name");
@@ -20,7 +20,7 @@ const addButton = document.querySelector(".profile__add-button");
 
 //variables cards
 //const cardCloseButton = document.querySelector("#close-cards-popup");
-const popupCards = document.querySelector("#popup-cards")
+//const popupCards = document.querySelector("#popup-cards")
 
 //variables forms
 const formAddCard = document.querySelector("#cards-form")
@@ -29,7 +29,7 @@ const profileForm = document.querySelector("#profile-form");
 //const inputCardTitle = document.querySelector("#input-title");
 //const inputCardLink = document.querySelector("#input-link");
 
-const elementsContainer = document.querySelector(".elements__container");
+//const elementsContainer = document.querySelector(".elements__container");
 
 //variables validation
 const validationConfig = {
