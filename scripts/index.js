@@ -85,13 +85,7 @@ function handleCardClick(name, link) {
 //PopupWithImage para visualizar card size up
 const popupWithImage = new PopupWithImage("#popup-size-card");
 
-//Section para cards
-
-//PREGUNTA!! 
-//Me podría señalar la razón por la cual no se ve la sección de cards en mi pagina. 
-//La consola no me da mensaje de error y he preguntado en el Discord  (aun sin respuesta).
-//Cuando resalto la sección solo aparece undefined repetido.
-//Muchas gracias.
+//Section para cards 
 const cardSection = new Section(
   {
     items: initialCards,
