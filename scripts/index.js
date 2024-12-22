@@ -42,7 +42,7 @@ const validationConfig = {
 };
 
 //cards iniciales
-const initialCardsData = [
+const initialCards = [
   {
     name: "Valle de Yosemite",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
@@ -94,7 +94,7 @@ const popupWithImage = new PopupWithImage("#popup-size-card");
 //Muchas gracias.
 const cardSection = new Section(
   {
-    items: initialCardsData,
+    items: initialCards,
     renderer: (cardData) => {
       const card = new Card(cardData, "#template-card", handleCardClick);
       const cardElement = card.generateCard();
@@ -127,8 +127,8 @@ profileButton.addEventListener("click", () => {
   popupProfileForm.open();
 
   const userData = userInfo.getUserInfo();
-  inputName.value = userData.name;
-  inputAbout.value = userData["about-me"]; //mensaje de error en consola pero es funcional en el sitio
+  inputName.value = userData.name; //mensaje de error presente pero es funcional en el sitio
+  inputAbout.value = userData["about-me"]; 
   
   //reestablecer submit button 
   profileFormValidator._toggleStateOfButton();

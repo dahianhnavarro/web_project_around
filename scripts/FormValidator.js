@@ -45,7 +45,7 @@ export class FormValidator {
             errorElement.textContent = errorMessage;
             errorElement.classList.add(this._errorClass);
         } else {
-            console.error(`No se encontró el ele,ento de error.`);
+            console.error(`No se encontró el elemento de error.`);
         }
     }
       

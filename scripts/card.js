@@ -69,5 +69,6 @@ export class Card {
         this._titleElement.textContent = this._name;
     
         this._setEventListeners();
+        return this._element;
     }
 }
