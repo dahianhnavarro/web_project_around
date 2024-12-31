@@ -157,4 +157,4 @@ popups.forEach((popup) => {
 
 popupWithImage.setEventListeners();
 popupProfileForm.setEventListeners();
-popupAddCardForm.setEventListeners()
+popupAddCardForm.setEventListeners();
